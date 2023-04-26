@@ -1,0 +1,68 @@
+@import url(reset.css);
+
+.main{
+        margin: auto;
+        width: 100vw;
+        height: 100vh;
+        background-image: url(../images/sections-background/section-1-header.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+}
+
+.header{
+    background: rgba(94, 93, 88, 0.6);
+}
+
+.header-nav {
+    width: 1160px;
+    height: 120px;
+    margin: auto;
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: space-between;
+   
+}
+
+.header-logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-span {
+    margin-left: -45px;
+    font-size: 40px;
+    padding-right: 19px;
+    color: #fff;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 31px;
+}
+
+.header-nav-ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    align-items: center;
+}
+
+.header-nav-list {
+    text-decoration: none;
+    margin-right: 21px;
+    text-transform: uppercase;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+
+
+.options{
+    width: 482px;
+    height: 377px;
+}
