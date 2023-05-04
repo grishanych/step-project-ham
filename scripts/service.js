@@ -23,4 +23,5 @@ tabs.forEach((tab, index) => {
     });
 });
 
+
 showTab(0);
