@@ -22,32 +22,31 @@ function hideLoadedImages() {
 }
 
 function showImagesCategories(index) {
-    if (index < 0 || index >= imgCategory.length ) {
+    if (index < 0 || index >= imgCategory.length  ) {
         return;
     }
- 
-
-    imgCategory.forEach(tab => tab.classList.remove('work-actived'));
+     imgCategory.forEach(tab => tab.classList.remove('work-actived'));
     showImg.forEach(content => content.style.display = 'none');
     imgCategory[index].classList.add('work-actived');
-
-
     // if (showImg[0]) {
     //     loadImages.classList.remove('work-images-hidden');
     // loadImages.classList.add('work-images-after-btn-click');
     // }
-    if (showImg[index]) {
+    if (showImg[index] || showImg[index] === 0) {
         showImg[index].style.display = 'flex';
     }
+
 
 }
 
 imgCategory.forEach((tab, index) => {
     tab.addEventListener('click', () => {
         imagesDefault.classList.add('work-images-hidden');
+        // loadImages.classList.remove('work-images-hidden');
         hideLoadedImages()
         hideBtn()
         showImagesCategories(index);
+        // console.log(event.target)
 
     });
 
