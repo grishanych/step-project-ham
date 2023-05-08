@@ -511,6 +511,10 @@
   content: url(../images/work/wordpress.jpg);
 }
 
+.work-img-default:hover{
+  cursor: pointer;
+  content: url(../images/work/work-poor.jpg);
+}
 .work-btn {
   display: flex;
   align-items: center;
