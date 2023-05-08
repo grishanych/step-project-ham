@@ -1,4 +1,5 @@
 @import url(reset.css);
+
 .main {
   margin: auto;
   width: 1920px;
@@ -82,7 +83,7 @@
   margin-top: 264px;
 }
 
-.header-title > h2 {
+.header-title>h2 {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 700;
@@ -91,11 +92,11 @@
   color: #ffffff;
 }
 
-.header-title > h2 > span {
+.header-title>h2>span {
   color: #18cfab;
 }
 
-.header-title > h1 {
+.header-title>h1 {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 700;
@@ -105,7 +106,7 @@
   margin-top: 22px;
 }
 
-.header-title > p {
+.header-title>p {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
@@ -471,9 +472,6 @@
   display: none;
 }
 
-#test2 {
-  display: none;
-}
 
 .work-images-after-btn-click {
   display: flex;
@@ -494,13 +492,23 @@
 }
 
 .work-img:hover {
-  /* border: 1px solid #0d51e4; */
-  /* display: none; */
- 
-  content: url(../images/work/work-1.png);
-  transform: scaleX(1);
   cursor: pointer;
-  /* background-size: cover;  */
+}
+
+.graphic-design:hover {
+  content: url(../images/work/graphic-design.jpg);
+}
+
+.web-design:hover {
+  content: url(../images/work/web-design.png);
+}
+
+.landing-page:hover {
+  content: url(../images/work/landing-page.jpg);
+}
+
+.wordpress:hover {
+  content: url(../images/work/wordpress.jpg);
 }
 
 .work-btn {
@@ -799,6 +807,7 @@ span.prev:hover {
 span.next {
   right: 28%;
 }
+
 span.prev {
   left: 28%;
 }
@@ -824,6 +833,7 @@ span.prev {
   from {
     left: 0%;
   }
+
   to {
     left: -100%;
   }
@@ -833,6 +843,7 @@ span.prev {
   from {
     left: 100%;
   }
+
   to {
     left: 0%;
   }
@@ -842,6 +853,7 @@ span.prev {
   from {
     left: 0%;
   }
+
   to {
     left: 100%;
   }
@@ -851,6 +863,7 @@ span.prev {
   from {
     left: -100%;
   }
+
   to {
     left: 0%;
   }
@@ -880,7 +893,7 @@ span.prev {
   border: 1px solid #18cfab;
 }
 
-.gallery-images > div {
+.gallery-images>div {
   padding: 20px 0;
   font-size: 30px;
 }
@@ -1023,6 +1036,6 @@ span.prev {
   padding: 47px 0;
 }
 
-.footer-text > span {
+.footer-text>span {
   color: #18cfab;
 }

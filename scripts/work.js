@@ -4,11 +4,29 @@ let imagesDefault = document.querySelector('.work-images');
 let imgCategory = document.querySelectorAll('.work-tabs-title');
 let showImg = document.querySelectorAll('.img-after-filter-clicked');
 
+let showAllImages = document.getElementById('show-all');
+let showAllImagesArrayList = Array.from(showAllImages.children);
+console.log(showAllImagesArrayList)
+
+function hideAllImages() {
+    showAllImagesArrayList.forEach((e) => {
+        console.log(e)
+        e.style.display = 'none'
+    })
+}
+hideAllImages();
+
+function showAllImagesOnTabAll() {
+    showAllImagesArrayList.forEach((e) => {
+        console.log(e)
+        e.style.display = 'flex'
+    })
+}
+
 btn.addEventListener('click', () => {
-    loadImages.classList.remove('work-images-hidden');
+    loadImages.classList.remove('hidden');
     loadImages.classList.add('work-images-after-btn-click');
-    btn.classList.remove('work-btn');
-    btn.classList.add('work-images-hidden')
+    hideBtn()
 });
 
 function hideBtn() {
@@ -22,17 +40,15 @@ function hideLoadedImages() {
 }
 
 function showImagesCategories(index) {
-    if (index < 0 || index >= imgCategory.length  ) {
+    if (index < 0 || index >= imgCategory.length) {
         return;
     }
-     imgCategory.forEach(tab => tab.classList.remove('work-actived'));
+    imgCategory.forEach(tab => tab.classList.remove('work-actived'));
     showImg.forEach(content => content.style.display = 'none');
+
     imgCategory[index].classList.add('work-actived');
-    // if (showImg[0]) {
-    //     loadImages.classList.remove('work-images-hidden');
-    // loadImages.classList.add('work-images-after-btn-click');
-    // }
-    if (showImg[index] || showImg[index] === 0) {
+
+    if (showImg[index]) {
         showImg[index].style.display = 'flex';
     }
 
@@ -41,13 +57,11 @@ function showImagesCategories(index) {
 
 imgCategory.forEach((tab, index) => {
     tab.addEventListener('click', () => {
+        showAllImagesOnTabAll()
         imagesDefault.classList.add('work-images-hidden');
-        // loadImages.classList.remove('work-images-hidden');
         hideLoadedImages()
         hideBtn()
         showImagesCategories(index);
-        // console.log(event.target)
-
     });
 
 });
